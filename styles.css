@@ -603,3 +603,19 @@
     height: 1rem;
   }
 }
+
+@media screen and (max-width: 299px){
+  #educationIcons1 {
+    width: 1rem;
+    height: 1rem;
+  }
+   
+  #educationIcons2 {
+    width: 1rem;
+    height: 1rem;
+  }
+  #educationIcons3 {
+    width: 1rem;
+    height: 1rem;
+  }
+}
