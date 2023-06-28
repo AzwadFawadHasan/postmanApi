@@ -655,3 +655,23 @@
 .services__container::-webkit-scrollbar-track:hover {
   background-color: black; /* Set the background color for the scrollbar track on hover */
 }
+
+.slide-button {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slide-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slide-right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

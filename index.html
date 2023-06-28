@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  
   <div class="hero__section">
     <div class="hero__wrapper">
       <div class="column__left">
@@ -52,6 +53,8 @@
     <div class="services__container">
       <div class="services__slide">
         <h1>Education</h1>
+        <button class="slide-button slide-left" onclick="changeSlide('prev')"> < </button>
+        <button class="slide-button slide-right" onclick="changeSlide('next')"> > </button>
         <div class="services__grid">
 
           <div class="services__left">
@@ -176,6 +179,8 @@
       </div>
       <!---Second part of the service slide-->
       <div class="services__slide">
+        <button class="slide-button slide-left" onclick="changeSlide('prev')"> < </button>
+        <button class="slide-button slide-right" onclick="changeSlide('next')"> > </button>
         <h1>Job Experience</h1>
         <div class="services__grid">
 
@@ -356,6 +361,71 @@
       </div>
     </div>
   </div>
+  <script>
+    // document.addEventListener('DOMContentLoaded', (event) => {
+    //   let slides = document.querySelectorAll('.services__slide');
+    //   let currentSlideIndex = 0;
+
+    //   function changeSlide(direction) {
+    //     // Hide current slide
+    //     slides[currentSlideIndex].style.display = 'none';
+
+    //     // Calculate next slide index
+    //     if (direction === 'next') {
+    //       currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    //     } else if (direction === 'prev') {
+    //       currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    //     }
+
+    //     // Show next slide
+    //     slides[currentSlideIndex].style.display = 'block';
+    //   }
+
+    //   let prevButton = document.querySelector('.slide-left');
+    //   let nextButton = document.querySelector('.slide-right');
+
+    //   if (prevButton) {
+    //     prevButton.addEventListener('click', function() { changeSlide('prev'); });
+    //   } else {
+    //     console.error('Cannot find element with class .slide-left');
+    //   }
+
+    //   if (nextButton) {
+    //     nextButton.addEventListener('click', function() { changeSlide('next'); });
+    //   } else {
+    //     console.error('Cannot find element with class .slide-right');
+    //   }
+
+    //   // Initially hide all slides except the first one
+    //   for (let i = 1; i < slides.length; i++) {
+    //     slides[i].style.display = 'none';
+    //   }
+    // });
+    document.addEventListener('DOMContentLoaded', (event) => {
+  let slides = Array.from(document.querySelectorAll('.services__slide'));
+  let currentSlideIndex = 0;
+
+  function changeSlide(direction) {
+    slides[currentSlideIndex].style.display = 'none'; // hide current slide
+
+    if (direction === 'next') {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    } else if (direction === 'prev') {
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+    }
+
+    slides[currentSlideIndex].style.display = 'block'; // show new slide
+  }
+
+  let prevButtons = Array.from(document.querySelectorAll('.slide-left'));
+  let nextButtons = Array.from(document.querySelectorAll('.slide-right'));
+
+  prevButtons.forEach((button) => button.addEventListener('click', () => changeSlide('prev')));
+  nextButtons.forEach((button) => button.addEventListener('click', () => changeSlide('next')));
+});
+
+  </script>
+  
 </body>
 
 </html>
