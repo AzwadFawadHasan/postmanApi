@@ -627,3 +627,10 @@
 .yellow__bar p {
   display: none;
 }}
+
+.Achievements__content {
+  display: flex;
+  align-items: flex-start;
+  
+  color: white;
+}
