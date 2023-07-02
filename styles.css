@@ -714,12 +714,12 @@
   display: flex;
   align-items: center;
   justify-content: center; /* Updated to center align content */
-  background: #002ed0;
-  padding: 2rem; /* Increased padding for better spacing */
+  background: black;
+  padding: 2rem; /* Increased padding for better spacing   #002ed0;*/
 }
 
 .skill__bar {
-  background: yellow;
+  background: black;
   height: auto; /* Updated to auto for dynamic height */
   width: 100%; /* Updated to 100% for full-width responsiveness */
   color: #000;
