@@ -664,3 +664,163 @@
 .olevelsTable tbody tr:last-of-type {
   border-bottom: 0.125rem solid white;
 }
+
+
+
+/*skill bar*/
+/* skill bar */
+/*
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #002ed0;
+  padding: 0rem 0 0 9.375rem;
+}
+
+.skill__bar {
+  background: yellow;
+  height: 5rem;
+  width: 68%;
+  color: #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: -3.125rem;
+}
+
+.skill__bar img {
+  margin-right: 2.5rem;
+}
+
+.skill__bar p {
+  margin-right: 2.5rem;
+  font-weight: 700;
+}
+
+.skill__bar span {
+  margin-right: 2.5rem;
+}
+
+.skill h1 {
+  margin-right: 15.625rem;
+  font-size: 2.5rem;
+  color: #fff;
+}
+*/
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Updated to center align content */
+  background: #002ed0;
+  padding: 2rem; /* Increased padding for better spacing */
+}
+
+.skill__bar {
+  background: yellow;
+  height: auto; /* Updated to auto for dynamic height */
+  width: 100%; /* Updated to 100% for full-width responsiveness */
+  color: #000;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+  justify-content: center; /* Center align items */
+  align-items: center;
+  padding: 1rem; /* Added padding for better spacing */
+}
+
+.skill__bar img {
+  margin: 1rem; /* Added margin for spacing between images */
+  max-width: 100%; /* Ensure images do not exceed parent container */
+  height: auto; /* Allow images to scale with aspect ratio */
+}
+
+.skill__bar p,
+.skill__bar span {
+  margin: 1rem; /* Added margin for spacing between elements */
+  font-weight: 700;
+}
+
+.skill h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-right: 1rem; /* Adjusted margin for better spacing */
+}
+
+
+
+.resume {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background: #0030db;
+ 
+  
+
+}
+
+.resume__bar {
+  background: yellow;
+  height:80px;
+  width:68%;
+  
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  margin-bottom: -50px;
+  
+  
+}
+
+.resume__bar img {
+  margin-right: 40px;
+
+}
+
+.resume__bar p {
+  margin-right: 40px;
+  font-weight: 700;
+}
+
+.resume__bar span {
+  margin-right: 60px;
+
+}
+
+.resume h1 {
+  margin-right: 250px;
+  font-size: 30px;
+  color:#fff;
+  margin-bottom: -25px;
+}
+
+/*Contact Media Queries*/
+@media screen and (max-width: 768px) {
+  .resume {
+      flex-direction: column;
+  }
+
+  .resume__bar{
+      width: 100%;
+      justify-content: center;
+      
+  }
+
+  .resume__bar img {
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+  .resume__bar p {
+      margin-right: 16px;
+  }
+  .resume__bar span {
+        font-size: 16px;  
+  }
+  .resume h1 {
+      margin-left:0;
+      margin-top:32px;
+      font-size:32px;
+
+  }
+}
